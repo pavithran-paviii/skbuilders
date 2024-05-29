@@ -1,0 +1,182 @@
+.navbar {
+  background: var(--light-grey);
+  height: 4rem;
+  position: relative;
+
+  & > .wrapper {
+    max-width: var(--max-width);
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > :nth-child(1) {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.3rem;
+      position: relative;
+      z-index: 2;
+
+      & > :nth-child(1) {
+        color: var(--main-blue);
+      }
+    }
+
+    & > img {
+      height: 2.5rem;
+    }
+
+    & > .navigations {
+      display: flex;
+      gap: 2rem;
+
+      & > div {
+        font-size: 1rem;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0%;
+          bottom: -5px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 0.6px;
+          background: var(--main-blue);
+          transition: all linear 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+
+      & > .selectedNav {
+        color: var(--main-blue);
+        font-weight: 500;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    & > .submitBtn {
+      height: 2.5rem;
+      background: var(--main-blue);
+      border-radius: var(--border-radius);
+      width: max-content;
+      padding: 0.5rem 2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      transition: all linear 0.3s;
+
+      &:hover {
+        box-shadow: 0 0 8px var(--main-blue);
+      }
+    }
+
+    & > .hamburgerIcon {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 2;
+
+      &:hover {
+        color: var(--main-blue);
+      }
+    }
+
+    & > .mobileNavigations {
+      display: none;
+      height: 0;
+
+      & > .navigations {
+        display: none;
+        flex-direction: column;
+        gap: 2rem;
+
+        & > div {
+          font-size: 1rem;
+          position: relative;
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            bottom: -5px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 0.6px;
+            background: var(--main-blue);
+            transition: all linear 0.3s;
+          }
+
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+
+        & > .selectedNav {
+          color: var(--main-blue);
+          font-weight: 500;
+
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .navbar {
+    padding: 0 0.6rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+    & > .wrapper {
+      & > .navigations,
+      .submitBtn {
+        display: none;
+      }
+
+      & > .hamburgerIcon {
+        display: block;
+      }
+
+      & > .mobileNavigations {
+        display: block;
+        position: fixed;
+        height: 100vh;
+        top: 0rem;
+        left: 0;
+        right: 0;
+        background: var(--light-grey);
+        z-index: 1;
+        transition: all linear 0.3s;
+
+        & > .navigations {
+          display: flex;
+          position: absolute;
+          top: 4rem;
+          padding: 2rem 1rem;
+        }
+      }
+    }
+  }
+}

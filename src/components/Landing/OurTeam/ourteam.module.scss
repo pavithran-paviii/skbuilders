@@ -1,0 +1,112 @@
+.ourTeam {
+  background: var(--light-grey);
+  padding: 4.5rem 0;
+
+  & > .wrapper {
+    max-width: var(--max-width);
+    margin: auto;
+
+    & > .title {
+      font-size: 3rem;
+      font-weight: 500;
+      position: relative;
+      text-align: center;
+      width: max-content;
+      margin: auto;
+
+      & > span {
+        color: var(--main-blue);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        height: 2.5px;
+        background: var(--main-blue);
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: grow-shrink 2s infinite ease-in-out;
+      }
+
+      @keyframes grow-shrink {
+        0% {
+          width: 80%;
+        }
+        50% {
+          width: 20%;
+        }
+        100% {
+          width: 80%;
+        }
+      }
+    }
+
+    & > .desc {
+      margin: 3rem 0;
+      opacity: 0.8;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    & > .allTeamMembers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      & > .eachMember {
+        height: max-content;
+        aspect-ratio: 1/1.2;
+        padding: 3rem 5rem;
+        background: var(--main-grey);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.2rem;
+        max-width: 20%;
+        text-align: center;
+
+        & > .icon {
+          border-radius: 50%;
+          background: var(--main-blue);
+          width: 6rem;
+          aspect-ratio: 1/1;
+        }
+
+        & > .name {
+          font-size: 1.4rem;
+          font-weight: 500;
+        }
+
+        & > .role {
+          color: var(--main-blue);
+          font-weight: 500;
+        }
+
+        & > .company {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .ourTeam {
+    padding: 1rem;
+
+    & > .wrapper {
+      & > .allTeamMembers {
+        flex-direction: column;
+
+        & > .eachMember {
+          max-width: none;
+        }
+      }
+    }
+  }
+}

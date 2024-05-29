@@ -1,0 +1,121 @@
+.aboutUs {
+  background: var(--light-grey);
+  padding: 4.5rem 0;
+
+  & > .wrapper {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    justify-content: center;
+
+    & > div {
+      width: 50%;
+    }
+
+    & > .leftContainer {
+      display: flex;
+      align-items: center;
+
+      & > .imageContainer {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--font-color-light);
+        padding: 0.2rem;
+
+        & > img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    & > .rightContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: center;
+
+      & > .title {
+        font-size: 2rem;
+        font-weight: 550;
+        text-decoration: underline var(--main-blue) 3px;
+        text-underline-offset: 8px;
+
+        & > span {
+          color: var(--main-blue);
+        }
+      }
+
+      & > .desc {
+        opacity: 0.8;
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+
+      & > .keyPrinciples {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+
+        & > li {
+          position: relative;
+          padding-left: 1.5em;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 0.6em;
+            height: 0.6em;
+            background-color: var(--main-blue);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            box-shadow: 0 0 5px var(--main-blue);
+          }
+        }
+      }
+
+      & > .submitBtn {
+        height: 2.5rem;
+        background: var(--main-blue);
+        border-radius: var(--border-radius);
+        width: max-content;
+        padding: 0.5rem 2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        transition: all linear 0.3s;
+
+        &:hover {
+          box-shadow: 0 0 8px var(--main-blue);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .aboutUs {
+    padding: 1rem;
+
+    & > .wrapper {
+      & > .leftContainer {
+        display: none;
+      }
+
+      & > .rightContainer {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+}

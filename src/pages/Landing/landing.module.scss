@@ -1,0 +1,22 @@
+.landing {
+  & > .map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-grey);
+
+    & > iframe {
+      outline: none;
+      border: none;
+      width: 100%;
+      filter: grayscale(30%) invert(92%) contrast(93%);
+    }
+  }
+  & > .copyRight {
+    background: var(--main-grey);
+    color: var(--main-blue);
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,132 @@
+.ourReview {
+  background: var(--main-grey);
+  padding: 4.5rem 0;
+
+  & > .wrapper {
+    max-width: var(--max-width);
+    margin: auto;
+
+    & > .title {
+      font-size: 3rem;
+      font-weight: 500;
+      position: relative;
+      text-align: center;
+      width: max-content;
+      margin: auto;
+
+      & > span {
+        color: var(--main-blue);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        height: 2.5px;
+        background: var(--main-blue);
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: grow-shrink 2s infinite ease-in-out;
+      }
+
+      @keyframes grow-shrink {
+        0% {
+          width: 80%;
+        }
+        50% {
+          width: 20%;
+        }
+        100% {
+          width: 80%;
+        }
+      }
+    }
+
+    & > .desc {
+      margin: 4rem 0;
+      opacity: 0.8;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    & > .reviewContainer {
+      margin-top: 3rem;
+
+      .eachReview {
+        width: 100%;
+        max-width: 1000px;
+        background: var(--light-grey);
+        padding: 2.5rem 2rem;
+        padding-top: 4rem;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        z-index: 1;
+        margin: 2rem auto;
+
+        & > img {
+          height: 4rem;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          position: absolute;
+          top: 0rem;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: 1px solid black;
+        }
+
+        & > .desc {
+          opacity: 0.8;
+          line-height: 1.5;
+        }
+
+        & > .name {
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+
+        & > .area {
+          font-size: 1.1rem;
+          color: var(--main-blue);
+          font-weight: 500;
+        }
+
+        & > .bannerBorder {
+          position: absolute;
+          height: 0.6rem;
+          width: 80%;
+          bottom: -0.9rem;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: var(--main-blue);
+          box-shadow: var(--main-blue) 0px 7px 25px 0px;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .ourReview {
+    padding: 1rem;
+
+    & > .wrapper {
+      & > .allServices {
+        flex-direction: column;
+
+        & > .eachService {
+          max-width: none;
+          aspect-ratio: unset;
+        }
+      }
+    }
+  }
+}
