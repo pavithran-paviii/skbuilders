@@ -11,14 +11,14 @@ const Main = () => {
       <div className={classNames.wrapper}>
         <div className={classNames.leftContainer}>
           <div className={classNames.title}>
-            Crafting Structures, Shaping Dreams...
+            <div>Experience the Difference.</div>
+            <div>Exceptional Quality. Affordable Luxury.</div>
           </div>
           <div className={classNames.desc}>
-            Our unwavering commitment to quality is reflected in every aspect of
-            our work, from meticulous planning and design to seamless execution
-            and timely completion. We pride ourselves on our attention to
-            detail, ensuring that each project meets the highest standards of
-            safety, durability, and aesthetic appeal.
+            We transform your vision into reality with quality craftsmanship,
+            transparent processes, and unwavering satisfaction. Discover
+            affordable luxury in our residential, commercial, apartment and
+            villa projects.
           </div>
           <div className={classNames.btnsContainer}>
             <div className={classNames.coloredBtn}>Get Quote</div>

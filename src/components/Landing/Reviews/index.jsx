@@ -9,14 +9,19 @@ const Reviews = () => {
   return (
     <div className={classNames.ourReview} id="testimonial">
       <div className={classNames.wrapper}>
-        <div className={classNames.title}>
-          Happy <span>Customer</span>
-        </div>
+        <div className={classNames.title}>Testimonials</div>
+        <h1
+          style={{
+            marginTop: "2rem",
+            textAlign: "center",
+            marginBottom: "-1.5rem",
+          }}
+        >
+          Don't just take our word for it!
+        </h1>
         <div className={classNames.desc}>
-          Our testimonials are a testament to our unwavering commitment to
-          customer satisfaction. We take pride in our work and strive to build
-          lasting relationships with our clients, ensuring that every project is
-          a success story worth sharing.
+          See what our clients have to say! We're proud to have built a
+          reputation for quality, trust, and exceeding expectations.
         </div>
         <div className={classNames.reviewContainer}>
           <Carousel

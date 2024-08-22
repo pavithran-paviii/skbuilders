@@ -11,14 +11,15 @@ const OurTeam = () => {
         <div className={classNames.title}>
           Our <span>Team</span>
         </div>
+        <h1 style={{ marginTop: "3rem", textAlign: "center" }}>
+          Building Better, Together
+        </h1>
         <div className={classNames.desc}>
-          Our team comprises highly skilled and experienced individuals from
-          various disciplines, each bringing their unique expertise to the
-          table.At the heart of our operations are our skilled tradespeople,
-          including carpenters, masons, electricians, and plumbers. Their
-          exceptional craftsmanship and commitment to quality are evident in
-          every aspect of their work, ensuring that each project is a testament
-          to our commitment to excellence.
+          We pride ourselves on having a team of highly skilled and dedicated
+          professionals who are passionate about their craft. Our team comprises
+          experienced architects, engineers, project managers, and skilled
+          labourers, all working together to ensure your project is completed to
+          the highest standards.
         </div>
         <div className={classNames.allTeamMembers}>
           <div className={classNames.eachMember}>

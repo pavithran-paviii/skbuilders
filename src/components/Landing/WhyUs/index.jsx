@@ -7,8 +7,8 @@ const WhyUs = () => {
     <div className={classNames.whyUs}>
       <div className={classNames.wrapper}>
         <div className={classNames.title}>
-          <div>Why choose</div>
-          <div>Construction?</div>
+          <div>Why Choose</div>
+          <div>SK Builders?</div>
         </div>
         <div className={classNames.ourMerits}>
           {merits?.map((eachMerits, index) => {

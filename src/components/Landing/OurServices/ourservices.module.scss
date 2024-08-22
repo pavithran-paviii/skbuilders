@@ -72,6 +72,13 @@
           background: var(--main-blue);
           width: 4rem;
           aspect-ratio: 1/1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & > svg {
+            font-size: 1.5rem;
+          }
         }
 
         & > .title {
